@@ -1,0 +1,21 @@
+ssh_authorized_keys:
+- github:styczynski
+hostname: k3node1
+k3os:
+  data_sources:
+  - aws
+  - cdrom
+  modules:
+  - kvm
+  - nvme
+  dns_nameservers:
+  - 194.204.159.1
+  - 194.204.152.34
+  ntp_servers:
+  - 0.pl.pool.ntp.org
+  - 1.pl.pool.ntp.org
+  password: jp2gmd
+  token: jp2gmd
+  k3s_args:
+  - server
+  - "--cluster-init"
