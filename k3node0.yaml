@@ -1,0 +1,22 @@
+ssh_authorized_keys:
+- "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv+wCNXoUzYEupDQxVI6KIMldh0sM9buMpv0GWmpAFMhnvKqSrP9qRkfdxavIo0BqZjQv1r4geWJ4dcK3QBhkm4bN3z5R9W9VGLFobsE3jUsFsVjnBBR8wIve7YoQc0k6naZUxmqdIYP+snaaeTLOrmyck6znZtPrT8Gd7FfbYZmUVtiEW7G+KCA3pKI7Lgy1JFl/09yKWF5b+G9/YBXyY1XPk7KQGRxPHFcm3WCLIkwsnadwFDfw5TQAYJjHmLBTSrsPyN3Si8epgOnrZOLdUjYDcuKWAt3hCDlais18vvRxIIvAJtlQf9ChH5zJW6lXu2GBsHT0F4dGnD+D2S6kP"
+- github:styczynski
+hostname: k3node0
+k3os:
+  data_sources:
+  - aws
+  - cdrom
+  modules:
+  - kvm
+  - nvme
+  dns_nameservers:
+  - 10.1.0.136
+  - 8.8.8.8
+  ntp_servers:
+  - 0.pl.pool.ntp.org
+  - 1.pl.pool.ntp.org
+  password: jp2gmd
+  token: jp2gmd
+  k3s_args:
+  - server
+  - "--cluster-init"
